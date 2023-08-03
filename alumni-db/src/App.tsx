@@ -7,8 +7,6 @@ const App = () => {
   let industries=["Tech Consulting","Web Dev"]
   return (
     <Form states={states} cities={cities} industries={industries}></Form>
-
-
   )
 }
 
