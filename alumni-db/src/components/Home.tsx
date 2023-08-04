@@ -2,6 +2,7 @@ import "./Home.style.css"
 import {useState} from "react"
 import { Alumni, fakeAlumniList } from "./alumni.type";
 import AlumniList from "./AlumniList";
+import CreateAlumni from "./CreateAlumni/CreateAlumni";
 
 
 const Home = () => {
@@ -30,6 +31,8 @@ const Home = () => {
         
     
     </>
+    //<CreateAlumni></CreateAlumni>
+
     );
         
 };
