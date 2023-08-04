@@ -4,7 +4,7 @@ import { Alumni, fakeAlumniList } from "./alumni.type";
 import AlumniList from "./AlumniList";
 import CreateAlumni from "./CreateAlumni/CreateAlumni";
 
-
+//madi
 const Home = () => {
 
     const [alumniList,setAlumniList] = useState(
