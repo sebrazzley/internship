@@ -1,6 +1,6 @@
 import React from 'react'
 import Form from '../Form/Form';
-const App = () => {
+const CreateAlumni = () => {
   let states=["Alabama","Alaska","Georgia"];
   let cities=["Tuscaloosa, Birmingham"];
   let industries=["Tech Consulting","Web Dev"]
@@ -9,4 +9,4 @@ const App = () => {
   )
 }
 
-export default App
+export default CreateAlumni

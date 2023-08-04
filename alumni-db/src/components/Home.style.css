@@ -1,0 +1,23 @@
+.article-header{
+    background-color:rgb(245, 27, 27);
+    color:beige;
+    border: 30px solid rgb(225, 101, 101);
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+
+.article-header-blank{
+    background-color:rgb(219, 167, 167);
+    color:beige;
+    border: 10px solid transparent;
+    text-align: left;
+}
+
+.section-content {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10;
+
+}
