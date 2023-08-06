@@ -49,7 +49,7 @@ const Form = ({gradClass, states, cities, industries}: SelectProps) => {
         <div style={{marginLeft: "200px"}}>
         <Button children='Submit Profile' onClick={()=> console.log("submitted")}></Button>
         <span style={{marginRight: "20px"}}></span>
-        <Button children='Back' onClick={()=> console.log("Go Back to Homepage")}></Button>
+        <Button children='Back' onClick={()=> console.log("Go Back to Homepage")} color="secondary"></Button>
         </div>
     </form>
   )
