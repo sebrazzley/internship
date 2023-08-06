@@ -9,8 +9,8 @@ interface Props {
 function Input ({label, id, inputType, required}: Props) {
   return (
     <div className="mb-3">
-        <label htmlFor={id} className="form-label">{label}</label>
-        <input id={id} type={inputType} style={{width: "500px"}} className="form-control"/>
+        <label htmlFor={id} className="form-label" style={{fontWeight: "bold"}}>{label}</label>
+        <input id={id} type={inputType} className="form-control"/>
     </div>
   )
 }
