@@ -2,24 +2,28 @@ import "./AlumniList.style.css"
 import { Alumni } from "./alumni.type"
 
 
-type Props = {
+interface Props {
     list: Alumni[];
 };
 
-const AlumniList = (props: Props) =>{
-    
-    const { list } = props;
+const AlumniList = ({list}: Props) =>{
     return (
         <div>
             This is alumni List page
             <table>
                 <tr>
+                    <th>Alumn</th>
                     <th>Company</th>
-                    <th>Contact</th>
-                    <th>Country</th>
+                    <th>Location</th>
                 </tr>
-                <tr>
-                    <td>Alfreds Futterkiste</td>
+                {list.map((alumni) => (
+                    <tr key={alumni.id}>
+                        <td>{alumni.firstName+" "+alumni.lastName}</td>
+                        <td>{alumni.companyName}</td>
+                    </tr>
+                ))}
+                {/* <tr> */}
+                    {/* <td>Alfreds Futterkiste</td>
                     <td>Maria Anders</td>
                     <td>Germany</td>
                 </tr>
@@ -47,9 +51,9 @@ const AlumniList = (props: Props) =>{
                     <td>Magazzini Alimentari Riuniti</td>
                     <td>Giovanni Rovelli</td>
                     <td>Italy</td>
-                </tr>
+                </tr> */}
             </table>
-                </div>
+        </div>
     )
 }
 

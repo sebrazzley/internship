@@ -3,11 +3,20 @@ export interface Alumni{
     firstName: string;
     lastName: string;
     companyName: string;
+    location: string;
 }
 
 export const fakeAlumniList: Alumni[] = [{
     id: "1",
     firstName: "Charles",
     lastName: "Henry",
-    companyName: "PwC"
+    companyName: "PwC",
+    location: "Atlanta"
+},
+{
+    id: "2",
+    firstName: "Jane",
+    lastName: "Doe",
+    companyName: "Crowe LLP",
+    location: "Chicago"
 }]

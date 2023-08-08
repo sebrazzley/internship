@@ -1,5 +1,5 @@
 import React from 'react'
-import Form from '../Form/Form';
+import Form from '../../Form/Form';
 
 const CreateAlumni = () => {
   let gradClass = [2019,2020,2021,2022,2023]
