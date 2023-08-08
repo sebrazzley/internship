@@ -1,14 +1,16 @@
 .article-header{
-    background-color:rgb(245, 27, 27);
+    background-color:darkblue;
     color:beige;
-    border: 30px solid rgb(225, 101, 101);
+    height: 100px;
+    padding-top: 30px;
+    /* border: 30px solid blue; */
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     
 }
 
 .article-header-blank{
-    background-color:rgb(219, 167, 167);
+    background-color:lightblue;
     color:beige;
     border: 10px solid transparent;
     text-align: left;
@@ -17,7 +19,5 @@
 .section-content {
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 10%;
-    margin-bottom: 10;
 
 }

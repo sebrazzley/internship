@@ -23,8 +23,9 @@ const Home = () => {
             </header>
         </article>
 
-        <section className = "section-content">
-            <div>This is a content part</div>
+        <section className="section-content">
+            <div>This is where the search bar should be</div>
+            <div>This is where the filters should be</div>
             <AlumniList list = {alumniList} />
         </section>
     </>

@@ -19,4 +19,11 @@ export const fakeAlumniList: Alumni[] = [{
     lastName: "Doe",
     companyName: "Crowe LLP",
     location: "Chicago"
+},
+{
+    id: "3",
+    firstName: "John",
+    lastName: "Smith",
+    companyName: "Sysco",
+    location: "NYC"
 }]
