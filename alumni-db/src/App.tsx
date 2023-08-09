@@ -3,8 +3,8 @@ import CreateAlumni from './components/CreateAlumni/CreateAlumni'
 
 const App = () => {
   return (
-    <div>
-      
+    <div className='App'>
+      <h1>UA Alumni Database</h1>
     </div>
   )
 }
