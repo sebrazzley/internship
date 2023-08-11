@@ -27,3 +27,8 @@ export const fakeAlumniList: Alumni[] = [{
     companyName: "Sysco",
     location: "NYC"
 }]
+
+export enum PageEnum {
+    list,
+    add,
+}

@@ -11,7 +11,7 @@ const AlumniList = ({list}: Props) =>{
         <div>
             <table>
                 <tr>
-                    <th>Alumn</th>
+                    <th>Alumnus</th>
                     <th>Company</th>
                     <th>Location</th>
                     <th>Action</th>
@@ -21,7 +21,12 @@ const AlumniList = ({list}: Props) =>{
                         <td>{alumni.firstName+" "+alumni.lastName}</td>
                         <td>{alumni.companyName}</td>
                         <td>{alumni.location}</td>
-                        <td>Action</td>
+                        <td><div>
+                            <input type="button" value="View"/>
+                            <input type="button" value="Edit"/>
+                            <input type="button" value="Delete"/>
+                            </div>
+                        </td>
                     </tr>
                 ))}
             </table>

@@ -46,6 +46,7 @@ const Form = ({gradClass, states, cities, industries}: SelectProps) => {
         {/* --> check if there's any duplicate */}
         {/* --> if no dup, new profile pushed to the database */}
         {/* --> if there's dup, allow user to see the existed one(s); if the existed one is theirs, ask if they want to update instead or discard*/}
+        
         <div style={{marginLeft: "200px"}}>
         <Button children='Submit Profile' onClick={()=> console.log("submitted")}></Button>
         <span style={{marginRight: "20px"}}></span>
