@@ -54,15 +54,16 @@ const Home = () => {
             </header>
         </article>
 
-        <article className="article-header-blank">
-            <div>This is where the search bar should be</div>
-            <div>This is where the filters should be</div>
-        </article>
+       
 
         <section className="section-content">  
             
             {shownPage === PageEnum.list && (
             <>
+                 <article className="article-header-blank">
+            <div>This is where the search bar should be</div>
+            <div>This is where the filters should be</div>
+                </article>
                 <input 
                 type="button" 
                 value="Add Alumnus" 
