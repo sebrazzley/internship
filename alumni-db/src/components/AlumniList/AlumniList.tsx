@@ -1,14 +1,19 @@
 import "./AlumniList.style.css"
 import { Alumni } from "./alumni.type"
+import { useState } from "react";
 
 
 interface Props {
     list: Alumni[];
+    onEdit: (data: Alumni) => void
 };
 
-const AlumniList = ({list}: Props) =>{
+const AlumniList = ({list, onEdit}: Props) =>{
     return (
         <div>
+            <article>
+                <h3 className="list-header">Alumni List</h3>
+            </article>
             <table>
                 <tr>
                     <th>Alumnus</th>
@@ -20,10 +25,10 @@ const AlumniList = ({list}: Props) =>{
                     <tr key={alumni.id}>
                         <td>{alumni.firstName+" "+alumni.lastName}</td>
                         <td>{alumni.companyName}</td>
-                        <td>{alumni.location}</td>
+                        <td>{alumni.state}</td>
                         <td><div>
                             <input type="button" value="View"/>
-                            <input type="button" value="Edit"/>
+                            <input type="button" value="Edit" onClick={() => onEdit(alumni)}/>
                             <input type="button" value="Delete"/>
                             </div>
                         </td>
