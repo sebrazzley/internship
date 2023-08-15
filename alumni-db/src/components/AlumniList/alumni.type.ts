@@ -13,20 +13,7 @@ export interface Alumni{
     email: string;
 }
 
-export const fakeAlumniList: Alumni[] = [{
-    id: "1",
-    firstName: "Charles",
-    lastName: "Henry",
-    bio: "Hey",
-    gradClass: "2020",
-    jobTitle: "Web Dev",
-    companyName: "PwC",
-    industry: "Hey",
-    state: "Alabama",
-    city: "Atlanta",
-    linkedIn: "mcscott8",
-    email: "mcscott5@crimson.ua.edu"
-}]
+
 
 export enum PageEnum {
     list,
