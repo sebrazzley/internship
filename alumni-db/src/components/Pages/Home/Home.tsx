@@ -4,6 +4,7 @@ import { Alumni, PageEnum } from "../../AlumniList/alumni.type";
 import AlumniList from "../../AlumniList/AlumniList";
 import CreateAlumni from "../CreateAlumni/CreateAlumni";
 import EditAlumni from "../EditAlumni/EditAlumni";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Home = () => {
   let gradClass = [2019, 2020, 2021, 2022, 2023];
