@@ -4,6 +4,7 @@ import { Alumni, PageEnum } from "../../AlumniList/alumni.type";
 import AlumniList from "../../AlumniList/AlumniList";
 import CreateAlumni from "../CreateAlumni/CreateAlumni";
 import EditAlumni from "../EditAlumni/EditAlumni";
+import SearchBar from "../../SearchAlum/Search";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
   const [alumniList, setAlumniList] = useState([] as Alumni[]);
   const [shownPage, setShownPage] = useState(PageEnum.list);
   const [dataToEdit, setDataToEdit] = useState({} as Alumni);
+  const [query, setQuery] = useState("")
 
   useEffect(() => {
     const listInString = window.localStorage.getItem("AlumniList");
@@ -31,10 +33,19 @@ const Home = () => {
     setShownPage(PageEnum.list);
   };
 
+
+
   const _setAlumniList = (list: Alumni[]) => {
     setAlumniList(list);
     window.localStorage.setItem("AlumniList", JSON.stringify(list));
   };
+
+  const searchBar = () => {
+    setShownPage(PageEnum.search)
+  }
+  const goToSearch = (list: Alumni[]) => {
+    return list.filter(item => item.firstName.toLowerCase().includes(query) || item.lastName.toLowerCase().includes(query))
+  }
 
   const addAlumHome = (data: Alumni) => {
     _setAlumniList([...alumniList, data]);
@@ -71,18 +82,22 @@ const Home = () => {
       <section className="section-content">
         {shownPage === PageEnum.list && (
           <>
-            <article className="article-header-blank">
-              <div>This is where the search bar should be</div>
-              <div>This is where the filters should be</div>
-            </article>
             <input
               type="button"
               value="Add Alumnus"
               onClick={onAddAlumnusClick}
               className="add-employee-btn"
             />
+            <article className="article-header-blank">
+            <div>
+                <input type="text" 
+                placeholder="Search..." 
+                className="search"
+                onChange={(e) => setQuery(e.target.value)} />
+            </div>
+            </article>
             <AlumniList
-              list={alumniList}
+              list={goToSearch(alumniList)}
               onEdit={editAlumniData}
               onDelete={deleteEmployee}
             />
