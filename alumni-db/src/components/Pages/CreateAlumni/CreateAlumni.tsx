@@ -31,7 +31,7 @@
 
 import React, {useState} from 'react'
 import Form from '../../Form/Form';
-import { Alumni, fakeAlumniList, } from '../../AlumniList/alumni.type';
+import { Alumni} from '../../AlumniList/alumni.type.ts';
 import AlumniList from "../../AlumniList/AlumniList";
 import Select from '../../Select/Select';
 import Input from '../../Input/Input';
