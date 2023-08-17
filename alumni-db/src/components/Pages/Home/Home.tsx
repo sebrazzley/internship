@@ -89,12 +89,26 @@ const Home = () => {
               className="add-employee-btn"
             />
             <article className="article-header-blank">
-            <div>
+            {/* <div>
                 <input type="text" 
                 placeholder="Search..." 
                 className="search"
                 onChange={(e) => setQuery(e.target.value)} />
-            </div>
+            </div> */}
+            <div className="input-group mb-3">
+  <div className="input-group-prepend">
+    <button className="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+    <div className="dropdown-menu">
+      <a className="dropdown-item" href="#">Industry</a>
+      <a className="dropdown-item" href="#">City</a>
+      <a className="dropdown-item" href="#">State</a>
+      <div role="separator" className="dropdown-divider"></div>
+      <a className="dropdown-item" href="#">Separated link</a>
+    </div>
+  </div>
+  <input type="text" 
+  className="form-control" placeholder="Search..." aria-label="Text input with dropdown button" onChange={(e) => setQuery(e.target.value)} ></input>
+</div>
             </article>
             <AlumniList
               list={goToSearch(alumniList)}
