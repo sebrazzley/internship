@@ -4,8 +4,8 @@ import CreateAlumni from './components/Pages/CreateAlumni/CreateAlumni';
 
 const App = () => {
   return (
-    <Home></Home>
-    // <CreateAlumni></CreateAlumni>
+    // <Home></Home>
+    <CreateAlumni></CreateAlumni>
   )
 }
 
