@@ -6,7 +6,7 @@ import CreateAlumni from "../CreateAlumni/CreateAlumni";
 import EditAlumni from "../EditAlumni/EditAlumni";
 import SearchBar from "../../SearchAlum/Search";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/"
+
 
 
 const Home = () => {
@@ -95,12 +95,6 @@ const Home = () => {
               className="add-employee-btn"
             />
             <article className="article-header-blank">
-              {/* <div>
-                <input type="text" 
-                placeholder="Search..." 
-                className="search"
-                onChange={(e) => setQuery(e.target.value)} />
-            </div> */}
               <div className="input-group mb-3">
                 <div className="input-group-prepend">
                   <button 
