@@ -2,28 +2,22 @@ export interface Alumni{
     id: string;
     firstName: string;
     lastName: string;
+    bio: string;
+    gradClass: string;
+    jobTitle: string;
     companyName: string;
-    location: string;
+    industry: string;
+    state: string;
+    city: string;
+    linkedIn: string;
+    email: string;
 }
 
-export const fakeAlumniList: Alumni[] = [{
-    id: "1",
-    firstName: "Charles",
-    lastName: "Henry",
-    companyName: "PwC",
-    location: "Atlanta"
-},
-{
-    id: "2",
-    firstName: "Jane",
-    lastName: "Doe",
-    companyName: "Crowe LLP",
-    location: "Chicago"
-},
-{
-    id: "3",
-    firstName: "John",
-    lastName: "Smith",
-    companyName: "Sysco",
-    location: "NYC"
-}]
+
+
+export enum PageEnum {
+    list,
+    add,
+    edit,
+    search
+}
