@@ -6,6 +6,8 @@ import CreateAlumni from "../CreateAlumni/CreateAlumni";
 import EditAlumni from "../EditAlumni/EditAlumni";
 import SearchBar from "../../SearchAlum/Search";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/"
+
 
 const Home = () => {
   let gradClass = [2019, 2020, 2021, 2022, 2023];
@@ -37,6 +39,8 @@ const Home = () => {
     setAlumniList(list);
     window.localStorage.setItem("AlumniList", JSON.stringify(list));
   };
+
+   
 
   const searchBar = () => {
     setShownPage(PageEnum.search);
@@ -99,14 +103,15 @@ const Home = () => {
             </div> */}
               <div className="input-group mb-3">
                 <div className="input-group-prepend">
-                  <button
+                  <button 
                     className="btn btn-outline-secondary dropdown-toggle"
                     type="button"
                     data-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
+                    
                   >
-                    Dropdown
+                    Criteria
                   </button>
                   <div className="dropdown-menu">
                     <a className="dropdown-item" href="#">
