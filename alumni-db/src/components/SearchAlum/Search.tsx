@@ -12,9 +12,12 @@ let filterList = ["Full Name", "State", "City", "Industry", "Company", "Job Titl
     <div className="input-group mb-3">
     <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >Filter</button>
     <ul className="dropdown-menu">
-      <li><a className="dropdown-item" href="#">Industry</a></li>
+        {filterList.map((item, index) => (
+            <li><a className="dropdown-item" href="#">{item}</a></li>
+        ))}
+      {/* <li><a className="dropdown-item" href="#">Industry</a></li>
       <li><a className="dropdown-item" href="#">Another action</a></li>
-      <li><a className="dropdown-item" href="#">Something else here</a></li>
+      <li><a className="dropdown-item" href="#">Something else here</a></li> */}
     </ul>
   </div>
   )
