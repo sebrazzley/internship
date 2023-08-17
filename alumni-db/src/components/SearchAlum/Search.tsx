@@ -7,7 +7,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Bootstrap JavaScript
 
 
 const Search = () => {
-
+let filterList = ["Full Name", "State", "City", "Industry", "Company", "Job Title"]
   return (
     <div className="input-group mb-3">
     <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >Filter</button>
