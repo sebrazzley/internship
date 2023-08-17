@@ -5,7 +5,9 @@ import AlumniList from "../../AlumniList/AlumniList";
 import CreateAlumni from "../CreateAlumni/CreateAlumni";
 import EditAlumni from "../EditAlumni/EditAlumni";
 import SearchBar from "../../SearchAlum/Search";
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Bootstrap JavaScript
+
 
 
 
@@ -77,6 +79,11 @@ const Home = () => {
     _setAlumniList(tempAlumniList);
   };
 
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State for dropdown visibility
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen)
+  }
+
   return (
     <>
       <article className="article-header">
@@ -95,15 +102,19 @@ const Home = () => {
               className="add-employee-btn"
             />
             <article className="article-header-blank">
+              {/* Dropdown Criteria */}
+              <SearchBar></SearchBar>
+              
               <div className="input-group mb-3">
                 <div className="input-group-prepend">
-                  <button 
+                  <button
                     className="btn btn-outline-secondary dropdown-toggle"
                     type="button"
                     data-toggle="dropdown"
+                    onClick= {toggleDropdown}
                     aria-haspopup="true"
-                    aria-expanded="false"
-                    
+                    aria-expanded={isDropdownOpen}
+                  
                   >
                     Criteria
                   </button>
@@ -116,10 +127,6 @@ const Home = () => {
                     </a>
                     <a className="dropdown-item" href="#">
                       State
-                    </a>
-                    <div role="separator" className="dropdown-divider"></div>
-                    <a className="dropdown-item" href="#">
-                      Separated link
                     </a>
                   </div>
                 </div>
