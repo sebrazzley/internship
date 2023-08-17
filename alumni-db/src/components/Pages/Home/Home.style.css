@@ -26,3 +26,14 @@
     float: right;
     margin-bottom: 5px;
 }
+
+.searchDrop {
+    display: inline-block;
+}
+
+.searchInput {
+    display: inline-block;
+    width: 500px;
+    margin-left: 10px;
+}
+

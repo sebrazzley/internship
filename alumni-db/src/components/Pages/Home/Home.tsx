@@ -5,11 +5,8 @@ import AlumniList from "../../AlumniList/AlumniList";
 import CreateAlumni from "../CreateAlumni/CreateAlumni";
 import EditAlumni from "../EditAlumni/EditAlumni";
 import SearchBar from "../../SearchAlum/Search";
-import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Bootstrap JavaScript
-
-
-
+import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap CSS
+import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Bootstrap JavaScript
 
 const Home = () => {
   let gradClass = [2019, 2020, 2021, 2022, 2023];
@@ -41,8 +38,6 @@ const Home = () => {
     setAlumniList(list);
     window.localStorage.setItem("AlumniList", JSON.stringify(list));
   };
-
-   
 
   const searchBar = () => {
     setShownPage(PageEnum.search);
@@ -81,8 +76,8 @@ const Home = () => {
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State for dropdown visibility
   const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen)
-  }
+    setIsDropdownOpen(!isDropdownOpen);
+  };
 
   return (
     <>
@@ -103,33 +98,11 @@ const Home = () => {
             />
             <article className="article-header-blank">
               {/* Dropdown Criteria */}
-              <SearchBar></SearchBar>
-              
-              <div className="input-group mb-3">
-                <div className="input-group-prepend">
-                  <button
-                    className="btn btn-outline-secondary dropdown-toggle"
-                    type="button"
-                    data-toggle="dropdown"
-                    onClick= {toggleDropdown}
-                    aria-haspopup="true"
-                    aria-expanded={isDropdownOpen}
-                  
-                  >
-                    Criteria
-                  </button>
-                  <div className="dropdown-menu">
-                    <a className="dropdown-item" href="#">
-                      Industry
-                    </a>
-                    <a className="dropdown-item" href="#">
-                      City
-                    </a>
-                    <a className="dropdown-item" href="#">
-                      State
-                    </a>
-                  </div>
+              <div style={{marginTop: "10px"}}>
+              <div className="searchDrop">
+                <SearchBar></SearchBar>
                 </div>
+              <div className="searchInput">
                 <input
                   type="text"
                   className="form-control"
@@ -137,7 +110,11 @@ const Home = () => {
                   aria-label="Text input with dropdown button"
                   onChange={(e) => setQuery(e.target.value)}
                 ></input>
+                </div>  
               </div>
+             
+                
+            
             </article>
             <AlumniList
               list={goToSearch(alumniList)}
