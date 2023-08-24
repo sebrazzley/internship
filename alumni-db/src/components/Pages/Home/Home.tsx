@@ -4,6 +4,7 @@ import { Alumni, PageEnum } from "../../AlumniList/alumni.type";
 import AlumniList from "../../AlumniList/AlumniList";
 import CreateAlumni from "../CreateAlumni/CreateAlumni";
 import EditAlumni from "../EditAlumni/EditAlumni";
+import ViewAlumni from "../ViewAlumni/ViewAlumni"
 import SearchBar from "../../SearchAlum/Search";
 import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap CSS
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Bootstrap JavaScript
@@ -17,6 +18,7 @@ const Home = () => {
   const [alumniList, setAlumniList] = useState([] as Alumni[]);
   const [shownPage, setShownPage] = useState(PageEnum.list);
   const [dataToEdit, setDataToEdit] = useState({} as Alumni);
+  const [dataToView, setDataToView] = useState({} as Alumni);
   const [query, setQuery] = useState("");
 
   useEffect(() => {
@@ -33,6 +35,11 @@ const Home = () => {
   const backButton = () => {
     setShownPage(PageEnum.list);
   };
+
+  const onViewAlumClick = (data: Alumni) => {
+    setShownPage(PageEnum.view);
+    setDataToView(data)
+  }
 
   const _setAlumniList = (list: Alumni[]) => {
     setAlumniList(list);
@@ -120,6 +127,7 @@ const Home = () => {
               list={goToSearch(alumniList)}
               onEdit={editAlumniData}
               onDelete={deleteEmployee}
+              onView={onViewAlumClick}
             />
           </>
         )}
@@ -145,6 +153,10 @@ const Home = () => {
             onBackClick={backButton}
             onUpdateClick={updateData}
           />
+        )}
+
+        {shownPage === PageEnum.view && (
+            <ViewAlumni data={dataToView} onBackClick={backButton}></ViewAlumni>
         )}
       </section>
     </>

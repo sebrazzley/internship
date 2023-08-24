@@ -8,14 +8,13 @@ interface Props {
   list: Alumni[];
   onEdit: (data: Alumni) => void;
   onDelete: (data: Alumni) => void;
+  onView: (data: Alumni) => void;
 }
 
 const AlumniList = (props: Props) => {
-  const { list, onEdit, onDelete } = props;
+  const { list, onEdit, onDelete, onView } = props;
   const [showModal, setShowModal] = useState(false);
-  const viewAlum = () => {
-    setShowModal(true);
-  };
+ 
 
   return (
     <div>
@@ -41,7 +40,7 @@ const AlumniList = (props: Props) => {
                     type="button"
                     value="View"
                     className="viewButton"
-                    //onClick={viewAlum}
+                    onClick={() => onView(alumni)}
                   />
                   <input
                     type="button"

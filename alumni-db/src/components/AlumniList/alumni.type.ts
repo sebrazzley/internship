@@ -19,5 +19,6 @@ export enum PageEnum {
     list,
     add,
     edit,
-    search
+    search,
+    view
 }
