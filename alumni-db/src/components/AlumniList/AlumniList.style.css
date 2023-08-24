@@ -18,4 +18,6 @@ table {
     text-align: center;
   }
 
- 
+ .editButton {
+  margin: 15px;
+ }

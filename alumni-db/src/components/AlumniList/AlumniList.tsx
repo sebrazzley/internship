@@ -35,7 +35,7 @@ const AlumniList = (props: Props) => {
               <td>{alumni.companyName}</td>
               <td>{alumni.state}</td>
               <td>
-                <div>
+                <div className="buttons">
                   <input
                     type="button"
                     value="View"
