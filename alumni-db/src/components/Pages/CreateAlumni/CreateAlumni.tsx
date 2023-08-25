@@ -123,8 +123,8 @@ const CreateAlumni = ({gradClass, states, cities, industries, onSubmitClick, onB
     <form onSubmit={onSubmitBtnClick}>
         <h1 style={{color: "blue", textAlign: "center"}}>CREATE NEW PROFILE</h1>
         <h3 style={{color: "white", backgroundColor: "darkblue", textAlign: "center", padding: "2px"}}>About You</h3>
-        <Input label="First Name: " id="first-name" inputType="text" value={firstName} required onInputChange={onFirstNameChange}></Input> 
-        <Input label="Last Name: " id="last-name" inputType="text" value={lastName} required onInputChange={onLastNameChange}></Input>   
+        <Input label="First Name: " id="first-name" inputType="text" value={firstName} required={true} onInputChange={onFirstNameChange}></Input> 
+        <Input label="Last Name: " id="last-name" inputType="text" value={lastName} required={true} onInputChange={onLastNameChange}></Input>   
         <Input label="Short Self-Introduction: " id="bio" value={intro} inputType="text" onInputChange={onIntroChange}></Input>
         {/* Dropdown for industry */}
         <p style={{fontWeight: "bold"}}>Graduation Class:</p>
@@ -132,8 +132,8 @@ const CreateAlumni = ({gradClass, states, cities, industries, onSubmitClick, onB
 
         {/* CURRENT JOB SECTION: */}
         <h3 style={{color: "white", backgroundColor: "darkblue", textAlign: "center", padding: "2px"}}>Your Current Job</h3>
-        <Input label="Current Job Title: " id="job-title" inputType="text" value={jobTitle} required onInputChange={onTitleChange}></Input>
-        <Input label="Company's Name: " id="company-name" inputType="text"  value={companyName} required onInputChange={onCompNameChange}></Input>
+        <Input label="Current Job Title: " id="job-title" inputType="text" value={jobTitle} onInputChange={onTitleChange}></Input>
+        <Input label="Company's Name: " id="company-name" inputType="text"  value={companyName} onInputChange={onCompNameChange}></Input>
         {/* Dropdown for industry */}
         <p style={{fontWeight: "bold"}}>Industry:</p>
         <Select listName="Industry" onOptionChange={onIndustryChange} items={industries}></Select>
